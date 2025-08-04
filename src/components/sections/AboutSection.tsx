@@ -11,7 +11,7 @@ export function AboutSection() {
 
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               With over 15 years of experience in accounting and financial consulting, 
-              we're dedicated to helping individuals and businesses achieve their financial goals 
+              we&apos;re dedicated to helping individuals and businesses achieve their financial goals 
               through expert guidance and personalized service.
             </p>
 

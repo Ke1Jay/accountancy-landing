@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function HeroSection() {
   return (
     <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gray-50">

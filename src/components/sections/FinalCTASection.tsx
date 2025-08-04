@@ -10,7 +10,7 @@ export function FinalCTASection() {
             </h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
               Join over 500 satisfied clients who have streamlined their finances and accelerated 
-              their growth with our expert accounting services. Let's discuss how we can help 
+              their growth with our expert accounting services. Let&apos;s discuss how we can help 
               your business thrive.
             </p>
 

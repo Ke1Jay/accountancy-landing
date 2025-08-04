@@ -22,7 +22,7 @@ export function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses like yours achieve financial success and peace of mind
+            See how we&apos;ve helped businesses like yours achieve financial success and peace of mind
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export function TestimonialsSection() {
 
               {/* Quote */}
               <blockquote className="text-gray-700 mb-6 leading-relaxed">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
               {/* Author */}

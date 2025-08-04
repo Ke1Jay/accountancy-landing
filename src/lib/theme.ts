@@ -159,16 +159,22 @@ export function generateLightColor(color: string, opacity: number = 0.2): string
   return color;
 }
 
-// Theme initialization script to prevent FOUC
+// Theme initialization script to prevent FOUC (client-side only)
 export const themeInitScript = `
   (function() {
     try {
+      // Only run on client side
+      if (typeof window === 'undefined') return;
+      
       const theme = localStorage.getItem('theme') || 'classic-original';
       const customThemes = JSON.parse(localStorage.getItem('customThemes') || '[]');
       
       // Check if it's a custom theme
       const customTheme = customThemes.find(t => t.id === theme);
       if (customTheme) {
+        // Remove any existing data-theme attribute
+        document.documentElement.removeAttribute('data-theme');
+        
         // Apply custom theme colors directly
         const root = document.documentElement;
         root.style.setProperty('--background', customTheme.colors.background);
@@ -184,6 +190,7 @@ export const themeInitScript = `
         document.documentElement.setAttribute('data-theme', theme);
       }
     } catch (e) {
+      // Fallback to default theme
       document.documentElement.setAttribute('data-theme', 'classic-original');
     }
   })();
