@@ -1,0 +1,454 @@
+---
+description: Next.js 15 + TypeScript + Tailwind CSS technical implementation rules covering performance optimization, component patterns, form handling, and accessibility standards
+globs: ["**/*.tsx", "**/*.ts", "**/*.css", "**/*.js", "**/*.jsx"]
+alwaysApply: true
+---
+
+# Next.js 15 + TypeScript + Tailwind CSS - Accounting Landing Page Rules
+
+## Project Overview
+Create a professional one-page landing page for a certified accountant using Next.js 15 App Router, TypeScript, and Tailwind CSS. Sections: Hero, Services, Pricing, About, Contact Form.
+
+## Core Technology Stack
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript with strict mode
+- **Styling**: Tailwind CSS v4.0+ with JIT mode
+- **Package Manager**: npm or pnpm (prefer pnpm for performance)
+
+## Next.js 15 Best Practices
+
+### App Router & Server Components
+- Default to Server Components (RSC) for better performance
+- Use `'use client'` only when absolutely necessary (forms, interactions)
+- Leverage parallel data fetching with Promise.all() in Server Components
+- Implement proper error boundaries with error.tsx files
+
+```typescript
+// Server Component example
+export default async function ServicesPage() {
+  const [services, testimonials] = await Promise.all([
+    getServices(),
+    getTestimonials()
+  ]);
+
+  return (
+    <div>
+      <ServicesGrid services={services} />
+      <TestimonialsSection testimonials={testimonials} />
+    </div>
+  );
+}
+```
+
+### Performance Optimization
+- Use next/image with priority for above-the-fold images
+- Implement dynamic imports for heavy components
+- Leverage Next.js 15's improved caching with revalidate tags
+- Use Suspense boundaries with loading.tsx for better UX
+
+```typescript
+// Dynamic import for heavy components
+const HeavyChart = dynamic(() => import('./HeavyChart'), {
+  loading: () => <ChartSkeleton />,
+  ssr: false
+});
+```
+
+### SEO & Metadata
+- Use generateMetadata() for dynamic meta tags
+- Implement structured data with JSON-LD
+- Add proper canonical URLs and Open Graph tags
+- Use next/head for client-side metadata when needed
+
+```typescript
+// Metadata API example
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Professional Accounting Services | Your Accountant Name',
+    description: 'Trusted accounting services for small businesses and individuals. Get expert financial guidance and tax preparation.',
+    openGraph: {
+      title: 'Professional Accounting Services',
+      description: 'Expert accounting and tax services',
+      images: ['/og-image.jpg'],
+    },
+  };
+}
+```
+
+## TypeScript Best Practices
+
+### Strict Type Safety
+- Enable strict mode in tsconfig.json
+- Use explicit return types for functions
+- Define interfaces for all data structures
+- Avoid `any` type - use `unknown` or proper types
+
+```typescript
+// Good TypeScript practices
+interface ServiceData {
+  id: string;
+  title: string;
+  description: string;
+  price?: number;
+}
+
+const fetchServices = async (): Promise<ServiceData[]> => {
+  // Implementation
+};
+```
+
+### Error Handling
+- Use custom error types for different error scenarios
+- Implement proper error boundaries
+- Use Result types for error-prone operations
+
+```typescript
+class ApiError extends Error {
+  constructor(
+    public statusCode: number,
+    message: string,
+    public code?: string
+  ) {
+    super(message);
+    this.name = 'ApiError';
+  }
+}
+```
+
+### Component Props & Types
+- Define props interfaces for all components
+- Use generic types where appropriate
+- Export types for reusability
+
+```typescript
+interface ButtonProps {
+  variant: 'primary' | 'secondary' | 'outline';
+  size: 'sm' | 'md' | 'lg';
+  children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+}
+
+export const Button: React.FC<ButtonProps> = ({ variant, size, children, ...props }) => {
+  // Implementation
+};
+```
+
+## Tailwind CSS v4.0 Optimization
+
+### Performance Configuration
+- Use JIT mode for dynamic class generation
+- Configure content paths properly in tailwind.config.js
+- Purge unused CSS in production builds
+- Use CSS custom properties for theme values
+
+```javascript
+// tailwind.config.js for v4.0
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'trust-blue': '#2563eb',
+        'financial-green': '#059669',
+        'professional-navy': '#1e293b',
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+### Responsive Design Patterns
+- Mobile-first approach with responsive utilities
+- Use container queries for component-based responsive design
+- Implement consistent spacing scale
+
+```tsx
+// Responsive component example
+<section className="py-12 md:py-24 lg:py-32">
+  <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {/* Content */}
+    </div>
+  </div>
+</section>
+```
+
+### Custom Components & Utility Classes
+- Create reusable component variants with cva (class-variance-authority)
+- Use @apply directive sparingly, prefer utility classes
+- Implement consistent design tokens
+
+```typescript
+// Using cva for component variants
+import { cva, type VariantProps } from 'class-variance-authority';
+
+const buttonVariants = cva(
+  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors',
+  {
+    variants: {
+      variant: {
+        primary: 'bg-trust-blue text-white hover:bg-trust-blue/90',
+        secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
+        outline: 'border border-gray-300 bg-white hover:bg-gray-50',
+      },
+      size: {
+        sm: 'h-9 px-3',
+        md: 'h-10 px-4',
+        lg: 'h-11 px-8',
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'md',
+    },
+  }
+);
+```
+
+## Component Architecture
+
+### File Structure
+```
+app/
+├── (landing)/
+│   ├── page.tsx              # Main landing page
+│   ├── loading.tsx           # Loading UI
+│   └── error.tsx             # Error boundary
+├── components/
+│   ├── ui/                   # Reusable UI components
+│   ├── sections/             # Page sections
+│   └── forms/                # Form components
+├── lib/
+│   ├── utils.ts              # Utility functions
+│   ├── validations.ts        # Zod schemas
+│   └── types.ts              # Type definitions
+└── styles/
+    └── globals.css           # Global styles
+```
+
+### Component Patterns
+- Use composition over inheritance
+- Implement proper loading and error states
+- Use React.forwardRef for components needing refs
+- Implement proper accessibility attributes
+
+```typescript
+// Well-structured component
+interface SectionProps {
+  title: string;
+  description?: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Section = React.forwardRef<HTMLElement, SectionProps>(
+  ({ title, description, children, className, ...props }, ref) => {
+    return (
+      <section
+        ref={ref}
+        className={cn('py-12 md:py-24', className)}
+        {...props}
+      >
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-professional-navy">
+              {title}
+            </h2>
+            {description && (
+              <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                {description}
+              </p>
+            )}
+          </div>
+          {children}
+        </div>
+      </section>
+    );
+  }
+);
+
+Section.displayName = 'Section';
+```
+
+## Form Handling & Validation
+
+### Form Implementation
+- Use React Hook Form with Zod validation
+- Implement proper error handling and loading states
+- Use Server Actions for form submission
+- Add proper accessibility attributes
+
+```typescript
+// Form schema with Zod
+import { z } from 'zod';
+
+export const contactSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Please enter a valid email address'),
+  phone: z.string().optional(),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+});
+
+export type ContactFormData = z.infer<typeof contactSchema>;
+```
+
+```typescript
+// Server Action
+'use server';
+
+import { contactSchema } from '@/lib/validations';
+
+export async function submitContactForm(formData: FormData) {
+  const validatedFields = contactSchema.safeParse({
+    name: formData.get('name'),
+    email: formData.get('email'),
+    phone: formData.get('phone'),
+    message: formData.get('message'),
+  });
+
+  if (!validatedFields.success) {
+    return { error: 'Invalid form data' };
+  }
+
+  // Process form submission
+  // Send email, save to database, etc.
+
+  return { success: true };
+}
+```
+
+## Performance & SEO Optimization
+
+### Core Web Vitals
+- Optimize LCP with proper image loading and caching
+- Minimize CLS with proper image dimensions and skeleton loaders
+- Optimize INP with efficient event handlers and minimal JavaScript
+
+### Image Optimization
+- Use next/image for all images
+- Implement proper alt text for accessibility
+- Use WebP format with fallbacks
+- Set proper priority for above-the-fold images
+
+```typescript
+// Optimized image component
+<Image
+  src="/hero-accountant.jpg"
+  alt="Professional certified accountant working with clients"
+  width={1200}
+  height={800}
+  priority
+  className="rounded-lg shadow-lg"
+  placeholder="blur"
+  blurDataURL="data:image/jpeg;base64,..."
+/>
+```
+
+### Bundle Optimization
+- Use dynamic imports for heavy components
+- Implement code splitting at route level
+- Minimize third-party library usage
+- Tree-shake unused code
+
+## Accessibility Standards
+
+### WCAG 2.1 AA Compliance
+- Maintain 4.5:1 color contrast ratio minimum
+- Implement proper heading hierarchy (h1 -> h6)
+- Add ARIA labels for complex interactions
+- Ensure keyboard navigation support
+
+```typescript
+// Accessible button component
+<button
+  type="button"
+  className="focus:outline-none focus:ring-2 focus:ring-trust-blue focus:ring-offset-2"
+  aria-label="Open contact form"
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleClick();
+    }
+  }}
+>
+  Contact Us
+</button>
+```
+
+## Testing & Quality Assurance
+
+### Testing Strategy
+- Unit tests with Jest and React Testing Library
+- E2E tests with Playwright
+- Type checking with TypeScript strict mode
+- Linting with ESLint and Prettier
+
+```typescript
+// Component test example
+import { render, screen } from '@testing-library/react';
+import { ContactForm } from '@/components/forms/ContactForm';
+
+describe('ContactForm', () => {
+  it('renders contact form with required fields', () => {
+    render(<ContactForm />);
+
+    expect(screen.getByLabelText(/name/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
+  });
+});
+```
+
+## Deployment & Production
+
+### Build Optimization
+- Enable minification and compression
+- Configure proper caching headers
+- Use CDN for static assets
+- Implement proper error monitoring
+
+### Environment Configuration
+- Use environment variables for sensitive data
+- Configure different environments (dev, staging, prod)
+- Implement proper logging and monitoring
+- Set up analytics and performance tracking
+
+## Code Quality Standards
+
+### Naming Conventions
+- Use PascalCase for components and interfaces
+- Use camelCase for functions and variables
+- Use kebab-case for file names
+- Use SCREAMING_SNAKE_CASE for constants
+
+### Code Organization
+- Group related functionality together
+- Use barrel exports for cleaner imports
+- Implement proper error boundaries
+- Follow single responsibility principle
+
+### Documentation
+- Use JSDoc comments for complex functions
+- Document component props and interfaces
+- Maintain README with setup instructions
+- Keep changelog updated
+
+## Security Considerations
+
+### Input Validation
+- Validate all user inputs on both client and server
+- Sanitize data before processing
+- Use CSRF protection for forms
+- Implement rate limiting for API endpoints
+
+### Content Security Policy
+- Configure strict CSP headers
+- Avoid inline scripts and styles
+- Use nonce for necessary inline content
+- Regular security audits
+
+Remember: Always prioritize user experience, performance, and accessibility. These rules should guide development decisions while maintaining flexibility for specific requirements.

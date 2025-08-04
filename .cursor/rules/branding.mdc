@@ -1,0 +1,288 @@
+---
+description: Comprehensive branding guidelines for the accountancy landing page including color palette, typography, voice & tone, and visual identity standards
+globs: ["**/*.tsx", "**/*.ts", "**/*.css", "**/*.md"]
+alwaysApply: true
+---
+# Accounting Landing Page - Branding Guidelines
+
+## Brand Positioning
+**Primary Message:** Professional, trustworthy, and accessible accounting services
+**Target Audience:** Small to medium businesses, entrepreneurs, individuals seeking accounting services
+**Brand Personality:** Professional, reliable, approachable, modern, transparent
+
+## Visual Identity
+
+### Logo Guidelines
+- Logo should be simple and professional
+- Incorporate accounting/financial elements subtly (calculator, graph, dollar sign)
+- Scalable from business card to billboard
+- Works in color and monochrome
+- Clear space: minimum 1x logo height on all sides
+
+### Color Palette
+
+PRIMARY COLORS:
+```
+Trust Blue: #2563eb
+- Usage: Primary buttons, headings, navigation
+- Psychological impact: Trust, stability, professionalism
+- Accessibility: High contrast with white text
+
+Financial Green: #059669  
+- Usage: Success states, pricing highlights, growth indicators
+- Psychological impact: Money, growth, prosperity
+- Pairs well with trust blue
+
+Professional Navy: #1e293b
+- Usage: Dark headings, footer, emphasis text
+- Psychological impact: Authority, expertise, reliability
+```
+
+SUPPORTING COLORS:
+```
+Light Blue: #dbeafe
+- Usage: Backgrounds, subtle highlights
+- 10% opacity version of trust blue
+
+Light Green: #d1fae5
+- Usage: Success backgrounds, positive indicators
+- 10% opacity version of financial green
+
+Neutral Gray: #6b7280
+- Usage: Body text, supporting information
+- Ensures readability and hierarchy
+
+Clean White: #ffffff
+- Usage: Backgrounds, card surfaces, text on dark
+- Creates breathing room and clarity
+```
+
+### Typography System
+
+PRIMARY TYPEFACE: Inter
+- Usage: Headlines, navigation, buttons
+- Characteristics: Modern, clean, highly legible
+- Weights: 400 (regular), 600 (semi-bold), 700 (bold)
+
+SECONDARY TYPEFACE: Open Sans
+- Usage: Body text, descriptions, form labels  
+- Characteristics: Friendly, accessible, readable
+- Weights: 400 (regular), 600 (semi-bold)
+
+MONOSPACE TYPEFACE: JetBrains Mono
+- Usage: Numbers, pricing, financial data
+- Ensures consistent alignment and professional appearance
+
+FONT SCALE:
+```
+H1: 48px / 3rem (Hero headlines)
+H2: 36px / 2.25rem (Section headers)  
+H3: 24px / 1.5rem (Subsection headers)
+H4: 20px / 1.25rem (Card titles)
+Body: 16px / 1rem (Main text)
+Small: 14px / 0.875rem (Fine print, captions)
+```
+
+### Iconography
+- Line-style icons preferred over filled
+- Consistent stroke width (2px)
+- Rounded line caps
+- Color: Primary blue (#2563eb) or neutral gray (#6b7280)
+- Size: 24px standard, 32px for emphasis
+
+Recommended icon set: Heroicons, Lucide, or Feather Icons
+
+### Photography Style
+- Professional business imagery
+- Natural lighting preferred
+- People in business casual attire
+- Diverse representation
+- Focus on collaboration and trust
+- Avoid overly staged or stock-looking photos
+
+EXAMPLES:
+- Accountant working with client
+- Professional headshots
+- Clean office environments
+- Financial documents and calculators
+- Handshakes and professional interactions
+
+### Imagery Treatment
+- Subtle drop shadows for depth
+- Rounded corners (8px radius)
+- Consistent aspect ratios (16:9 for hero, 4:3 for cards)
+- Overlay gradients when text is placed on images
+
+## Voice and Tone
+
+### Brand Voice
+- **Professional:** Knowledgeable and competent
+- **Approachable:** Friendly and easy to understand
+- **Trustworthy:** Honest and transparent
+- **Helpful:** Solution-oriented and supportive
+
+### Tone Guidelines
+**DO:**
+- Use clear, simple language
+- Explain complex concepts simply
+- Focus on client benefits
+- Be reassuring and confidence-building
+- Use active voice
+
+**DON'T:**
+- Use accounting jargon without explanation
+- Sound overly formal or intimidating  
+- Make promises you can't keep
+- Use overly casual language
+- Create urgency through fear
+
+### Content Examples
+
+HEADLINES:
+✅ "Professional Accounting Services You Can Trust"
+✅ "Simplify Your Finances with Expert Support"
+❌ "Revolutionary Disruptive Accounting Solutions"
+❌ "We'll Make Your Tax Problems Disappear"
+
+BUTTON TEXT:
+✅ "Get Free Consultation"
+✅ "View Our Services"  
+✅ "Start Today"
+❌ "Click Here"
+❌ "Submit Now"
+
+## Layout Principles
+
+### Grid System
+- 12-column grid on desktop
+- 4-column grid on tablet
+- 1-column grid on mobile
+- 24px gutter width
+- Maximum content width: 1200px
+
+### Spacing Scale
+```
+4px / 0.25rem - Tight spacing (icon gaps)
+8px / 0.5rem - Small spacing (button padding)
+16px / 1rem - Standard spacing (element margins)
+24px / 1.5rem - Medium spacing (section padding)
+48px / 3rem - Large spacing (section breaks)
+96px / 6rem - Extra large spacing (major sections)
+```
+
+### Component Hierarchy
+1. **Hero Section** - Most prominent, large text, primary CTA
+2. **Services Section** - Clear grid, equal emphasis
+3. **Pricing Section** - Prominent but not overwhelming
+4. **About Section** - Personal but professional
+5. **Contact Section** - Accessible and friendly
+
+## Application Guidelines
+
+### Website Headers
+- Logo left-aligned
+- Navigation center-aligned
+- Contact button right-aligned
+- Consistent across all pages
+- Sticky on scroll
+
+### Call-to-Action Buttons
+- Primary: Blue background, white text
+- Secondary: White background, blue border
+- Minimum 44px height for accessibility
+- Descriptive text ("Get Free Quote" vs "Click Here")
+- Consistent hover/focus states
+
+### Forms
+- Clear labels above inputs
+- Helpful placeholder text
+- Error states in red (#ef4444)
+- Success states in green (#10b981)
+- Progress indicators for multi-step forms
+
+### Cards and Containers
+- White background
+- Subtle shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
+- 8px border radius
+- 24px internal padding
+- Consistent hover effects
+
+## Accessibility Standards
+
+### Color Contrast
+- Text on white: minimum 4.5:1 ratio
+- Large text: minimum 3:1 ratio
+- Interactive elements: easily distinguishable
+- Never rely on color alone to convey information
+
+### Focus States
+- Clear visual indication
+- High contrast outline
+- Consistent across all interactive elements
+- Never remove focus indicators
+
+### Text Guidelines
+- Minimum 16px font size for body text
+- Maximum 75 characters per line
+- Clear hierarchy with proper heading structure
+- Alt text for all informative images
+
+## Brand Applications
+
+### Business Cards
+- Logo + contact information
+- Clean, minimal design
+- Professional typography
+- Quality cardstock
+
+### Email Signatures
+- Logo (small)
+- Contact information
+- Brand colors for accents
+- Professional photo (optional)
+
+### Letterhead
+- Logo placement consistent
+- Contact information in footer
+- Subtle brand color accents
+- Professional and clean
+
+### Social Media
+- Consistent profile imagery
+- Brand colors in graphics
+- Professional tone in captions
+- Regular, helpful content
+
+## Do's and Don'ts
+
+### DO:
+- Maintain consistent spacing
+- Use high-quality images
+- Keep designs clean and uncluttered
+- Test on multiple devices
+- Follow accessibility guidelines
+- Use brand colors consistently
+
+### DON'T:
+- Mix too many fonts
+- Use low-resolution images
+- Overcrowd layouts
+- Ignore mobile experience  
+- Use colors outside the palette
+- Compromise on readability
+
+## File Formats and Specifications
+
+### Web Graphics
+- Logo: SVG (preferred), PNG with transparency
+- Photos: JPEG (optimized), WebP (modern browsers)
+- Icons: SVG (vector), PNG (raster backup)
+- Maximum file sizes: 500KB for images, 100KB for icons
+
+### Print Materials
+- Logo: Vector (AI, EPS, PDF)
+- Photos: High resolution (300 DPI minimum)
+- Color mode: CMYK for print, RGB for digital
+- Bleed: 3mm minimum for printed materials
+
+This comprehensive branding guide ensures consistency across all touchpoints while maintaining the professional, trustworthy image essential for accounting services.
