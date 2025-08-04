@@ -7,7 +7,6 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { PricingSection } from "@/components/sections/PricingSection";
-import { JournalSection } from "@/components/sections/JournalSection";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 import { Footer } from "@/components/sections/Footer";
@@ -24,7 +23,6 @@ export default function Home() {
       <TestimonialsSection />
       <ProcessSection />
       <PricingSection />
-      <JournalSection />
       <NewsletterSection />
       <FinalCTASection />
       <Footer />

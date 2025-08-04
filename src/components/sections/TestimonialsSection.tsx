@@ -1,15 +1,15 @@
 export function TestimonialsSection() {
   const testimonials = [
     {
-      quote: "The team's expertise in financial management has transformed our business operations. Their strategic insights have been invaluable.",
+      quote: "Their expertise in tax planning saved us over $15,000 last year. The strategic insights and proactive approach have been game-changing for our business.",
       author: "Sarah Johnson",
-      position: "CEO, TechStart Inc.",
+      position: "CEO, Digital Solutions Inc.",
       rating: 5
     },
     {
-      quote: "Professional, reliable, and always available when we need them. They've become an essential part of our business success.",
+      quote: "Professional, reliable, and incredibly knowledgeable. They simplified our complex bookkeeping and gave us the financial clarity we needed to grow.",
       author: "Michael Chen", 
-      position: "Founder, GrowthCo",
+      position: "Founder, Green Energy Co",
       rating: 5
     }
   ];
@@ -18,11 +18,11 @@ export function TestimonialsSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-            Client Stories: Real Experience, Real Results
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--professional-navy)] mb-4">
+            What Our Clients Say
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover how our clients have achieved their financial goals with our expert guidance
+            See how we've helped businesses like yours achieve financial success and peace of mind
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
 
               {/* Author */}
               <div>
-                <div className="font-semibold text-slate-800">{testimonial.author}</div>
+                <div className="font-semibold text-[var(--professional-navy)]">{testimonial.author}</div>
                 <div className="text-sm text-gray-600">{testimonial.position}</div>
               </div>
             </div>

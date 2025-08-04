@@ -2,18 +2,18 @@ export function ProcessSection() {
   const steps = [
     {
       number: "01",
-      title: "Step One Goes Here",
-      description: "Initial consultation to understand your business needs and financial goals."
+      title: "Discovery & Consultation",
+      description: "We start with a comprehensive consultation to understand your business needs, financial goals, and current challenges."
     },
     {
       number: "02", 
-      title: "Step Two Goes Here",
-      description: "Comprehensive analysis of your current financial position and systems."
+      title: "Analysis & Strategy",
+      description: "Our team analyzes your financial position and develops a customized strategy tailored to your specific requirements."
     },
     {
       number: "03",
-      title: "Step Three Goes Here", 
-      description: "Implementation of customized accounting solutions and processes."
+      title: "Implementation & Support", 
+      description: "We implement our proven systems and provide ongoing support to ensure your financial operations run smoothly."
     }
   ];
 
@@ -23,20 +23,20 @@ export function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content Column */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8">
-              Our Three Steps Process
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--professional-navy)] mb-8">
+              Our Proven Three-Step Process
             </h2>
 
             <div className="space-y-8">
               {steps.map((step, index) => (
                 <div key={index} className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 bg-[var(--trust-blue)] text-white rounded-full flex items-center justify-center font-bold">
                       {step.number}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                    <h3 className="text-xl font-semibold text-[var(--professional-navy)] mb-2">
                       {step.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">

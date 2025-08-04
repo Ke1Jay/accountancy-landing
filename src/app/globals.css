@@ -1,16 +1,255 @@
 @import "tailwindcss";
 
+/* Default Theme - Classic Trust Original */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
-  /* Brand Colors */
-  --trust-blue: #2563eb;
+  --trust-blue: #1e40af;
   --financial-green: #059669;
-  --professional-navy: #1e293b;
+  --professional-navy: #0f172a;
   --light-blue: #dbeafe;
   --light-green: #d1fae5;
+  --neutral-gray: #64748b;
+}
+
+/* ========================================
+   CLASSIC TRUST THEMES
+   ======================================== */
+
+/* Classic Trust - Original (Balanced Professional) */
+[data-theme="classic-original"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #1e40af;
+  --financial-green: #059669;
+  --professional-navy: #0f172a;
+  --light-blue: #dbeafe;
+  --light-green: #d1fae5;
+  --neutral-gray: #64748b;
+}
+
+/* Classic Trust - Vibrant (Electric Energy) */
+[data-theme="classic-vibrant"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #0066ff;
+  --financial-green: #00d084;
+  --professional-navy: #ff6b35;
+  --light-blue: #80ccff;
+  --light-green: #80e8b8;
+  --neutral-gray: #4a5568;
+}
+
+/* Classic Trust - Mellow (Warm & Earthy) */
+[data-theme="classic-mellow"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #6b8db5;
+  --financial-green: #7a9b6e;
+  --professional-navy: #8b6f52;
+  --light-blue: #b5c8db;
+  --light-green: #c4d1b8;
+  --neutral-gray: #9b8b7a;
+}
+
+/* ========================================
+   WEALTH & PROSPERITY THEMES
+   ======================================== */
+
+/* Wealth & Prosperity - Original (Growth-Focused) */
+[data-theme="wealth-original"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #0d9488;
+  --financial-green: #047857;
+  --professional-navy: #134e4a;
+  --light-blue: #ccfbf1;
+  --light-green: #dcfce7;
   --neutral-gray: #6b7280;
+}
+
+/* Wealth & Prosperity - Vibrant (Bright Wealth) */
+[data-theme="wealth-vibrant"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #00bcd4;
+  --financial-green: #4caf50;
+  --professional-navy: #ff9800;
+  --light-blue: #80deea;
+  --light-green: #a5d6a7;
+  --neutral-gray: #546e7a;
+}
+
+/* Wealth & Prosperity - Mellow (Earthy Prosperity) */
+[data-theme="wealth-mellow"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #8fa88c;
+  --financial-green: #b8753a;
+  --professional-navy: #a08470;
+  --light-blue: #c4d1c8;
+  --light-green: #d4b896;
+  --neutral-gray: #9b8b7a;
+}
+
+/* ========================================
+   PREMIUM LUXURY THEMES
+   ======================================== */
+
+/* Premium Luxury - Original (Sophisticated Purple/Gold) */
+[data-theme="luxury-original"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #6366f1;
+  --financial-green: #d97706;
+  --professional-navy: #312e81;
+  --light-blue: #e0e7ff;
+  --light-green: #fef3c7;
+  --neutral-gray: #6b7280;
+}
+
+/* Premium Luxury - Vibrant (High-Energy Luxury) */
+[data-theme="luxury-vibrant"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #8b5cf6;
+  --financial-green: #fbbf24;
+  --professional-navy: #ec4899;
+  --light-blue: #c4b5fd;
+  --light-green: #fde68a;
+  --neutral-gray: #6b7280;
+}
+
+/* Premium Luxury - Mellow (Dusty Rose Elegance) */
+[data-theme="luxury-mellow"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #c2949a;
+  --financial-green: #c8835f;
+  --professional-navy: #7d6b8d;
+  --light-blue: #dcc4c9;
+  --light-green: #e4c1ab;
+  --neutral-gray: #a69088;
+}
+
+/* ========================================
+   MODERN FINTECH THEMES
+   ======================================== */
+
+/* Modern Fintech - Original (Contemporary Balance) */
+[data-theme="fintech-original"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #0ea5e9;
+  --financial-green: #10b981;
+  --professional-navy: #1e293b;
+  --light-blue: #e0f2fe;
+  --light-green: #d1fae5;
+  --neutral-gray: #64748b;
+}
+
+/* Modern Fintech - Vibrant (Tech-Forward Energy) */
+[data-theme="fintech-vibrant"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #0ea5e9;
+  --financial-green: #06d6a0;
+  --professional-navy: #ff6b6b;
+  --light-blue: #74c0fc;
+  --light-green: #51cf66;
+  --neutral-gray: #495057;
+}
+
+/* Modern Fintech - Mellow (Warm Tech) */
+[data-theme="fintech-mellow"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #6b8db5;
+  --financial-green: #95a885;
+  --professional-navy: #b8753a;
+  --light-blue: #b5c8db;
+  --light-green: #c8d1bb;
+  --neutral-gray: #9b8b7a;
+}
+
+/* ========================================
+   EARTH & STABILITY THEMES
+   ======================================== */
+
+/* Earth & Stability - Original (Reliable Warmth) */
+[data-theme="earth-original"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #0f766e;
+  --financial-green: #059669;
+  --professional-navy: #92400e;
+  --light-blue: #f0fdfa;
+  --light-green: #d1fae5;
+  --neutral-gray: #78716c;
+}
+
+/* Earth & Stability - Vibrant (Energetic Earth) */
+[data-theme="earth-vibrant"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #0891b2;
+  --financial-green: #16a34a;
+  --professional-navy: #ea580c;
+  --light-blue: #67e8f9;
+  --light-green: #86efac;
+  --neutral-gray: #78716c;
+}
+
+/* Earth & Stability - Mellow (Natural Sophistication) */
+[data-theme="earth-mellow"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #8fa88c;
+  --financial-green: #9ba068;
+  --professional-navy: #c8835f;
+  --light-blue: #c4d1c8;
+  --light-green: #d3d4a0;
+  --neutral-gray: #a08470;
+}
+
+/* ========================================
+   MINIMAL CLEAN THEMES
+   ======================================== */
+
+/* Minimal Clean - Original (Professional Minimalism) */
+[data-theme="minimal-original"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #475569;
+  --financial-green: #6b7280;
+  --professional-navy: #1e293b;
+  --light-blue: #f1f5f9;
+  --light-green: #f8fafc;
+  --neutral-gray: #64748b;
+}
+
+/* Minimal Clean - Vibrant (Bold Minimal) */
+[data-theme="minimal-vibrant"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #1e40af;
+  --financial-green: #059669;
+  --professional-navy: #dc2626;
+  --light-blue: #dbeafe;
+  --light-green: #d1fae5;
+  --neutral-gray: #374151;
+}
+
+/* Minimal Clean - Mellow (Warm Minimal) */
+[data-theme="minimal-mellow"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --trust-blue: #9b8b7a;
+  --financial-green: #a69088;
+  --professional-navy: #8b6f52;
+  --light-blue: #e6ddd4;
+  --light-green: #e8ddd6;
+  --neutral-gray: #b5a897;
 }
 
 @theme inline {
@@ -23,6 +262,9 @@
   --color-trust-blue: var(--trust-blue);
   --color-financial-green: var(--financial-green);
   --color-professional-navy: var(--professional-navy);
+  --color-light-blue: var(--light-blue);
+  --color-light-green: var(--light-green);
+  --color-neutral-gray: var(--neutral-gray);
 }
 
 @media (prefers-color-scheme: dark) {
