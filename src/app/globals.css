@@ -271,6 +271,146 @@
   --dark-section-bg: var(--secondary);
 }
 
+/* ========================================
+   5 NEW ACCOUNTING & FINANCIAL THEMES
+   Following semantic color system structure
+   ======================================== */
+
+/* Corporate Blue - Deep corporate blue with silver accents */
+[data-theme="corporate-blue"] {
+  --primary: #1e3a8a;          /* Deep corporate blue - ultimate professionalism */
+  --primary-content: #ffffff;
+  --primary-hover: #1e40af;
+
+  --secondary: #334155;        /* Professional slate - authority */
+  --secondary-content: #ffffff;
+  --secondary-hover: #475569;
+
+  --accent: #0891b2;           /* Trust cyan accent - highlights */
+  --accent-content: #ffffff;
+  --accent-hover: #0e7490;
+
+  --neutral: #64748b;          /* Professional gray text */
+  --neutral-content: #ffffff;
+
+  --base-100: #ffffff;         /* Pure white cards */
+  --base-200: #f8fafc;         /* Very light blue-gray sections */
+  --base-300: #e2e8f0;         /* Light borders */
+  --base-content: #1e293b;     /* Dark text on light backgrounds */
+
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #f1f5f9;
+  --dark-section-bg: var(--secondary);
+}
+
+/* Warm Trust - Your #b8753a color as primary! */
+[data-theme="warm-trust"] {
+  --primary: #b8753a;          /* YOUR EXACT COLOR as primary! */
+  --primary-content: #ffffff;
+  --primary-hover: #a0633f;
+
+  --secondary: #8b6f52;        /* Warm brown - cozy authority */
+  --secondary-content: #ffffff;
+  --secondary-hover: #7a5d43;
+
+  --accent: #059669;           /* Professional green for balance */
+  --accent-content: #ffffff;
+  --accent-hover: #047857;
+
+  --neutral: #a8a29e;          /* Warm gray text */
+  --neutral-content: #ffffff;
+
+  --base-100: #fefcf9;         /* Warm white backgrounds */
+  --base-200: #faf7f2;         /* Warm section backgrounds */
+  --base-300: #f0ebe4;         /* Warm borders */
+  --base-content: #4a453e;     /* Warm dark text */
+
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #f6f2ed;
+  --dark-section-bg: var(--secondary);
+}
+
+/* Sage Professional - Sophisticated sage greens with navy */
+[data-theme="sage-professional"] {
+  --primary: #7c9885;          /* Sophisticated sage green */
+  --primary-content: #ffffff;
+  --primary-hover: #6b8473;
+
+  --secondary: #2d3748;        /* Deep navy for authority */
+  --secondary-content: #ffffff;
+  --secondary-hover: #4a5568;
+
+  --accent: #d97706;           /* Gold accent for prosperity */
+  --accent-content: #ffffff;
+  --accent-hover: #b45309;
+
+  --neutral: #718096;          /* Balanced gray text */
+  --neutral-content: #ffffff;
+
+  --base-100: #ffffff;         /* Clean white */
+  --base-200: #f7fafc;         /* Light sage tint */
+  --base-300: #edf2f7;         /* Soft borders */
+  --base-content: #2d3748;     /* Navy text */
+
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #f0f4f1;
+  --dark-section-bg: var(--secondary);
+}
+
+/* Premium Gold - Rich navy with gold accents for luxury */
+[data-theme="premium-gold"] {
+  --primary: #1e293b;          /* Rich navy as primary */
+  --primary-content: #ffffff;
+  --primary-hover: #334155;
+
+  --secondary: #d97706;        /* Gold as secondary for luxury */
+  --secondary-content: #ffffff;
+  --secondary-hover: #b45309;
+
+  --accent: #059669;           /* Success green accent */
+  --accent-content: #ffffff;
+  --accent-hover: #047857;
+
+  --neutral: #64748b;          /* Professional gray */
+  --neutral-content: #ffffff;
+
+  --base-100: #ffffff;         /* Pure white */
+  --base-200: #fefbf6;         /* Warm gold tint */
+  --base-300: #fef3c7;         /* Light gold backgrounds */
+  --base-content: #1e293b;     /* Navy text */
+
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #fffbeb;
+  --dark-section-bg: var(--secondary);
+}
+
+/* Modern Teal - Contemporary teal with warm accents */
+[data-theme="modern-teal"] {
+  --primary: #0d9488;          /* Modern teal */
+  --primary-content: #ffffff;
+  --primary-hover: #0f766e;
+
+  --secondary: #1e293b;        /* Professional navy */
+  --secondary-content: #ffffff;
+  --secondary-hover: #334155;
+
+  --accent: #f59e0b;           /* Warm amber accent */
+  --accent-content: #ffffff;
+  --accent-hover: #d97706;
+
+  --neutral: #6b7280;          /* Clean gray text */
+  --neutral-content: #ffffff;
+
+  --base-100: #ffffff;         /* Clean white */
+  --base-200: #f0fdfa;         /* Light teal tint */
+  --base-300: #ccfbf1;         /* Teal borders */
+  --base-content: #134e4a;     /* Teal-navy text */
+
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #ecfdf5;
+  --dark-section-bg: var(--secondary);
+}
+
 @theme inline {
   /* Base System Colors */
   --color-background: var(--background);

@@ -172,6 +172,89 @@ const themeGroups: ThemeGroup[] = [
         }
       }
     ]
+  },
+  {
+    id: 'corporate-professional',
+    name: 'Corporate Professional',
+    description: 'Deep corporate and professional themes for established firms',
+    psychology: 'Conveys ultimate professionalism, authority, and corporate excellence',
+    bestFor: 'Large corporations, established accounting firms, enterprise clients',
+    themes: [
+      {
+        id: 'corporate-blue',
+        name: 'Corporate Blue',
+        description: 'Deep corporate blue with silver accents',
+        variant: 'Original',
+        colors: {
+          primary: '#1e3a8a',
+          secondary: '#334155',
+          accent: '#0891b2'
+        }
+      },
+      {
+        id: 'premium-gold',
+        name: 'Premium Gold',
+        description: 'Rich navy with gold accents for luxury',
+        variant: 'Original',
+        colors: {
+          primary: '#1e293b',
+          secondary: '#d97706',
+          accent: '#059669'
+        }
+      }
+    ]
+  },
+  {
+    id: 'warm-approachable',
+    name: 'Warm & Approachable',
+    description: 'Friendly, warm themes that build personal connections',
+    psychology: 'Creates approachable, trustworthy, and comfortable feelings',
+    bestFor: 'Small business accountants, family firms, personal financial advisors',
+    themes: [
+      {
+        id: 'warm-trust',
+        name: 'Warm Trust',
+        description: 'Your signature #b8753a color as primary',
+        variant: 'Original',
+        isRecommended: true,
+        colors: {
+          primary: '#b8753a',
+          secondary: '#8b6f52',
+          accent: '#059669'
+        }
+      },
+      {
+        id: 'sage-professional',
+        name: 'Sage Professional',
+        description: 'Sophisticated sage greens with navy',
+        variant: 'Original',
+        colors: {
+          primary: '#7c9885',
+          secondary: '#2d3748',
+          accent: '#d97706'
+        }
+      }
+    ]
+  },
+  {
+    id: 'contemporary-fresh',
+    name: 'Contemporary Fresh',
+    description: 'Modern, fresh themes for forward-thinking professionals',
+    psychology: 'Suggests innovation, freshness, and contemporary expertise',
+    bestFor: 'Modern practices, younger demographics, tech-savvy clients',
+    themes: [
+      {
+        id: 'modern-teal',
+        name: 'Modern Teal',
+        description: 'Contemporary teal with warm accents',
+        variant: 'Original',
+        colors: {
+          primary: '#0d9488',
+          secondary: '#1e293b',
+          accent: '#f59e0b'
+        }
+      }
+    ]
   }
 ];
 

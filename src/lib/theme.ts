@@ -7,6 +7,11 @@ export const PREDEFINED_THEMES = {
   'luxury-original': 'Premium Luxury - Original',
   'earth-original': 'Earth & Stability - Original',
   'minimal-original': 'Minimal Clean - Original',
+  'corporate-blue': 'Corporate Blue',
+  'warm-trust': 'Warm Trust',
+  'sage-professional': 'Sage Professional',
+  'premium-gold': 'Premium Gold',
+  'modern-teal': 'Modern Teal',
 } as const;
 
 export type ThemeId = keyof typeof PREDEFINED_THEMES;
