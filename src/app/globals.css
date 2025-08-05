@@ -411,6 +411,56 @@
   --dark-section-bg: var(--secondary);
 }
 
+/* SQS Accountant - Sophisticated warm earth tones with professional blue-grey */
+[data-theme="sqs-accountant"] {
+  /* Base Colors */
+  --background: #fbfaf7;
+  --foreground: #161616;
+
+  /* Semantic Brand Colors */
+  --primary: #243b53;            /* Deep blue-grey, used for main CTAs and buttons */
+  --primary-content: #ffffff;
+  --primary-hover: #1b2a3a;
+
+  --secondary: #9e7a5e;          /* Warm taupe/brown accent - seen on icons, hovers */
+  --secondary-content: #ffffff;
+  --secondary-hover: #7b6048;
+
+  --accent: #f7e3ce;             /* Light warm beige, card backgrounds/alt backgrounds */
+  --accent-content: #243b53;
+  --accent-hover: #edd3ba;
+
+  --neutral: #7b8794;            /* Muted mid-grey for text and dividers */
+  --neutral-content: #14191f;
+
+  --base-100: #ffffff;           /* Card backgrounds */
+  --base-200: #fbfaf7;           /* Main site background */
+  --base-300: #f3f3f1;           /* Borders, subtle dividers */
+  --base-content: #22262a;
+
+  /* State Colors */
+  --info: #4b9cd3;
+  --info-content: #fff;
+  --success: #53b987;
+  --success-content: #fff;
+  --warning: #f59e42;
+  --warning-content: #fff;
+  --error: #e06a6a;
+  --error-content: #fff;
+
+  /* Component-specific semantics */
+  --hero-bg: var(--base-200);            /* Main hero area */
+  --section-alt-bg: #f7f3ef;             /* Used to break up site sections */
+  --card-bg: var(--base-100);
+  --dark-section-bg: #243b53;
+  --dark-section-content: #fff;
+
+  /* Interactive states */
+  --primary-hover: #1b2a3a;
+  --secondary-hover: #7b6048;
+  --accent-hover: #edd3ba;
+}
+
 @theme inline {
   /* Base System Colors */
   --color-background: var(--background);

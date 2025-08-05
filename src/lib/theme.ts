@@ -12,6 +12,7 @@ export const PREDEFINED_THEMES = {
   'sage-professional': 'Sage Professional',
   'premium-gold': 'Premium Gold',
   'modern-teal': 'Modern Teal',
+  'sqs-accountant': 'SQS Accountant',
 } as const;
 
 export type ThemeId = keyof typeof PREDEFINED_THEMES;

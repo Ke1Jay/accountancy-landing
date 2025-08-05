@@ -233,6 +233,17 @@ const themeGroups: ThemeGroup[] = [
           secondary: '#2d3748',
           accent: '#d97706'
         }
+      },
+      {
+        id: 'sqs-accountant',
+        name: 'SQS Accountant',
+        description: 'Sophisticated warm earth tones with professional blue-grey',
+        variant: 'Original',
+        colors: {
+          primary: '#243b53',
+          secondary: '#9e7a5e',
+          accent: '#f7e3ce'
+        }
       }
     ]
   },
