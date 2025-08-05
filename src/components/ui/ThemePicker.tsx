@@ -21,14 +21,14 @@ export interface ThemeGroup {
         variant: 'Original' | 'Vibrant' | 'Mellow';
         isRecommended?: boolean;
         colors: {
-            trustBlue: string;
-            financialGreen: string;
-            professionalNavy: string;
+            primary: string;
+            secondary: string;
+            accent: string;
         };
     }>;
 }
 
-// Updated theme groups without custom theme functionality
+// Updated theme groups with semantic colors
 const themeGroups: ThemeGroup[] = [
   {
     id: 'classic-trust',
@@ -44,9 +44,9 @@ const themeGroups: ThemeGroup[] = [
         variant: 'Original',
         isRecommended: true,
         colors: {
-          trustBlue: '#1e40af',
-          financialGreen: '#059669',
-          professionalNavy: '#0f172a'
+          primary: '#1e40af',
+          secondary: '#0f172a',
+          accent: '#059669'
         }
       },
       {
@@ -55,9 +55,9 @@ const themeGroups: ThemeGroup[] = [
         description: 'More energetic and modern',
         variant: 'Vibrant',
         colors: {
-          trustBlue: '#2563eb',
-          financialGreen: '#10b981',
-          professionalNavy: '#1e293b'
+          primary: '#0066ff',
+          secondary: '#ff6b35',
+          accent: '#00d084'
         }
       },
       {
@@ -66,9 +66,9 @@ const themeGroups: ThemeGroup[] = [
         description: 'Softer, more approachable',
         variant: 'Mellow',
         colors: {
-          trustBlue: '#3b82f6',
-          financialGreen: '#34d399',
-          professionalNavy: '#334155'
+          primary: '#6b8db5',
+          secondary: '#8b6f52',
+          accent: '#7a9b6e'
         }
       }
     ]
@@ -86,73 +86,9 @@ const themeGroups: ThemeGroup[] = [
         description: 'Sophisticated wealth management',
         variant: 'Original',
         colors: {
-          trustBlue: '#1d4ed8',
-          financialGreen: '#047857',
-          professionalNavy: '#111827'
-        }
-      },
-      {
-        id: 'wealth-vibrant',
-        name: 'Wealth Vibrant',
-        description: 'Dynamic investment focus',
-        variant: 'Vibrant',
-        colors: {
-          trustBlue: '#2563eb',
-          financialGreen: '#059669',
-          professionalNavy: '#1f2937'
-        }
-      },
-      {
-        id: 'wealth-mellow',
-        name: 'Wealth Mellow',
-        description: 'Refined luxury approach',
-        variant: 'Mellow',
-        colors: {
-          trustBlue: '#3b82f6',
-          financialGreen: '#10b981',
-          professionalNavy: '#374151'
-        }
-      }
-    ]
-  },
-  {
-    id: 'premium-luxury',
-    name: 'Premium Luxury',
-    description: 'High-end, exclusive financial services palette',
-    psychology: 'Suggests exclusivity, premium service, and attention to detail',
-    bestFor: 'Boutique firms, luxury financial services, executive accounting',
-    themes: [
-      {
-        id: 'premium-original',
-        name: 'Premium Original',
-        description: 'Exclusive financial services',
-        variant: 'Original',
-        colors: {
-          trustBlue: '#1e3a8a',
-          financialGreen: '#065f46',
-          professionalNavy: '#0c1017'
-        }
-      },
-      {
-        id: 'premium-vibrant',
-        name: 'Premium Vibrant',
-        description: 'Luxury with energy',
-        variant: 'Vibrant',
-        colors: {
-          trustBlue: '#1d4ed8',
-          financialGreen: '#047857',
-          professionalNavy: '#111827'
-        }
-      },
-      {
-        id: 'premium-mellow',
-        name: 'Premium Mellow',
-        description: 'Sophisticated elegance',
-        variant: 'Mellow',
-        colors: {
-          trustBlue: '#2563eb',
-          financialGreen: '#059669',
-          professionalNavy: '#1f2937'
+          primary: '#0d9488',
+          secondary: '#134e4a',
+          accent: '#047857'
         }
       }
     ]
@@ -170,32 +106,29 @@ const themeGroups: ThemeGroup[] = [
         description: 'Tech-forward accounting',
         variant: 'Original',
         colors: {
-          trustBlue: '#2563eb',
-          financialGreen: '#10b981',
-          professionalNavy: '#1e293b'
+          primary: '#0ea5e9',
+          secondary: '#1e293b',
+          accent: '#10b981'
         }
-      },
+      }
+    ]
+  },
+  {
+    id: 'premium-luxury',
+    name: 'Premium Luxury',
+    description: 'High-end, exclusive financial services palette',
+    psychology: 'Suggests exclusivity, premium service, and attention to detail',
+    bestFor: 'Boutique firms, luxury financial services, executive accounting',
+    themes: [
       {
-        id: 'fintech-vibrant',
-        name: 'Fintech Vibrant',
-        description: 'Dynamic tech integration',
-        variant: 'Vibrant',
-        isRecommended: true,
+        id: 'luxury-original' as ThemeId,
+        name: 'Premium Original',
+        description: 'Exclusive financial services',
+        variant: 'Original',
         colors: {
-          trustBlue: '#3b82f6',
-          financialGreen: '#34d399',
-          professionalNavy: '#334155'
-        }
-      },
-      {
-        id: 'fintech-mellow',
-        name: 'Fintech Mellow',
-        description: 'Approachable innovation',
-        variant: 'Mellow',
-        colors: {
-          trustBlue: '#60a5fa',
-          financialGreen: '#6ee7b7',
-          professionalNavy: '#475569'
+          primary: '#6366f1',
+          secondary: '#312e81',
+          accent: '#d97706'
         }
       }
     ]
@@ -213,31 +146,9 @@ const themeGroups: ThemeGroup[] = [
         description: 'Grounded financial stability',
         variant: 'Original',
         colors: {
-          trustBlue: '#1e40af',
-          financialGreen: '#047857',
-          professionalNavy: '#0f172a'
-        }
-      },
-      {
-        id: 'earth-vibrant',
-        name: 'Earth Vibrant',
-        description: 'Dynamic sustainability',
-        variant: 'Vibrant',
-        colors: {
-          trustBlue: '#2563eb',
-          financialGreen: '#059669',
-          professionalNavy: '#1e293b'
-        }
-      },
-      {
-        id: 'earth-mellow',
-        name: 'Earth Mellow',
-        description: 'Natural, calming approach',
-        variant: 'Mellow',
-        colors: {
-          trustBlue: '#3b82f6',
-          financialGreen: '#10b981',
-          professionalNavy: '#334155'
+          primary: '#0f766e',
+          secondary: '#92400e',
+          accent: '#059669'
         }
       }
     ]
@@ -255,31 +166,9 @@ const themeGroups: ThemeGroup[] = [
         description: 'Clean, efficient service',
         variant: 'Original',
         colors: {
-          trustBlue: '#2563eb',
-          financialGreen: '#059669',
-          professionalNavy: '#1e293b'
-        }
-      },
-      {
-        id: 'minimal-vibrant',
-        name: 'Minimal Vibrant',
-        description: 'Energetic simplicity',
-        variant: 'Vibrant',
-        colors: {
-          trustBlue: '#3b82f6',
-          financialGreen: '#10b981',
-          professionalNavy: '#334155'
-        }
-      },
-      {
-        id: 'minimal-mellow',
-        name: 'Minimal Mellow',
-        description: 'Soft, understated elegance',
-        variant: 'Mellow',
-        colors: {
-          trustBlue: '#60a5fa',
-          financialGreen: '#34d399',
-          professionalNavy: '#475569'
+          primary: '#475569',
+          secondary: '#1e293b',
+          accent: '#6b7280'
         }
       }
     ]
@@ -307,13 +196,13 @@ export function ThemePicker() {
       {/* Theme Picker Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[var(--professional-navy)] hover:text-[var(--trust-blue)] transition-colors"
+        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[var(--secondary)] hover:text-[var(--primary)] transition-colors"
         aria-label="Choose theme"
       >
         <div className="flex gap-1">
-          <div className="w-3 h-3 rounded-full bg-[var(--trust-blue)]" />
-          <div className="w-3 h-3 rounded-full bg-[var(--financial-green)]" />
-          <div className="w-3 h-3 rounded-full bg-[var(--professional-navy)]" />
+          <div className="w-3 h-3 rounded-full bg-[var(--primary)]" />
+          <div className="w-3 h-3 rounded-full bg-[var(--accent)]" />
+          <div className="w-3 h-3 rounded-full bg-[var(--secondary)]" />
         </div>
         <span>Theme</span>
         <svg 
@@ -336,23 +225,23 @@ export function ThemePicker() {
           />
           
           {/* Menu */}
-          <div className="absolute right-0 mt-2 w-[600px] max-w-[95vw] bg-white rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden">
+          <div className="absolute right-0 mt-2 w-[600px] max-w-[95vw] bg-[var(--base-100)] rounded-xl shadow-2xl border border-[var(--base-300)] z-50 overflow-hidden">
             {/* Header */}
-            <div className="p-4 border-b border-gray-100 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-1">Choose Theme Style</h3>
-              <p className="text-sm text-gray-500">18 professional color schemes for accounting firms</p>
+            <div className="p-4 border-b border-[var(--base-300)] bg-[var(--base-200)]">
+              <h3 className="font-semibold text-[var(--base-content)] mb-1">Choose Theme Style</h3>
+              <p className="text-sm text-[var(--neutral)]">Professional semantic color schemes for accounting firms</p>
             </div>
 
             {/* Group Tabs */}
-            <div className="flex overflow-x-auto border-b border-gray-100 bg-gray-50">
+            <div className="flex overflow-x-auto border-b border-[var(--base-300)] bg-[var(--base-200)]">
               {themeGroups.map((group) => (
                 <button
                   key={group.id}
                   onClick={() => setActiveGroup(group.id)}
                   className={`px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors ${
                     activeGroup === group.id 
-                      ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'text-[var(--primary)] border-b-2 border-[var(--primary)] bg-[var(--base-100)]' 
+                      : 'text-[var(--neutral)] hover:text-[var(--base-content)]'
                   }`}
                 >
                   {group.name}
@@ -362,16 +251,15 @@ export function ThemePicker() {
 
             {/* Theme Content */}
             <div className="max-h-[500px] overflow-y-auto">
-              {/* Predefined Themes Content */}
               {themeGroups
                 .filter(group => group.id === activeGroup)
                 .map((group) => (
                   <div key={group.id} className="p-4">
                     {/* Group Info */}
                     <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-1">{group.name}</h4>
-                      <p className="text-sm text-gray-600 mb-2">{group.description}</p>
-                      <p className="text-xs text-gray-500">Best for: {group.bestFor}</p>
+                      <h4 className="font-semibold text-[var(--base-content)] mb-1">{group.name}</h4>
+                      <p className="text-sm text-[var(--neutral)] mb-2">{group.description}</p>
+                      <p className="text-xs text-[var(--neutral)]">Best for: {group.bestFor}</p>
                     </div>
 
                     {/* Theme Variants */}
@@ -382,52 +270,52 @@ export function ThemePicker() {
                           onClick={() => handleThemeChange(theme.id)}
                           className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors text-left ${
                             currentTheme === theme.id 
-                              ? 'bg-blue-50 border-2 border-blue-200' 
-                              : 'hover:bg-gray-50 border-2 border-transparent'
+                              ? 'bg-[var(--primary)]/10 border-2 border-[var(--primary)]/20' 
+                              : 'hover:bg-[var(--base-200)] border-2 border-transparent'
                           }`}
                         >
                           {/* Color Preview */}
                           <div className="flex gap-1 flex-shrink-0">
                             <div 
-                              className="w-4 h-4 rounded-full border border-white shadow-sm" 
-                              style={{ backgroundColor: theme.colors.trustBlue }}
+                              className="w-4 h-4 rounded-full border border-[var(--base-300)] shadow-sm" 
+                              style={{ backgroundColor: theme.colors.primary }}
                             />
                             <div 
-                              className="w-4 h-4 rounded-full border border-white shadow-sm" 
-                              style={{ backgroundColor: theme.colors.financialGreen }}
+                              className="w-4 h-4 rounded-full border border-[var(--base-300)] shadow-sm" 
+                              style={{ backgroundColor: theme.colors.accent }}
                             />
                             <div 
-                              className="w-4 h-4 rounded-full border border-white shadow-sm" 
-                              style={{ backgroundColor: theme.colors.professionalNavy }}
+                              className="w-4 h-4 rounded-full border border-[var(--base-300)] shadow-sm" 
+                              style={{ backgroundColor: theme.colors.secondary }}
                             />
                           </div>
                           
                           {/* Theme Info */}
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2">
-                              <span className="font-medium text-gray-900">{theme.name}</span>
+                              <span className="font-medium text-[var(--base-content)]">{theme.name}</span>
                               {theme.isRecommended && (
-                                <span className="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
+                                <span className="text-xs bg-[var(--accent)]/10 text-[var(--accent)] px-2 py-0.5 rounded-full">
                                   ⭐ Recommended
                                 </span>
                               )}
                             </div>
                             <div className="flex items-center gap-2 mt-1">
                               <span className={`text-xs px-2 py-0.5 rounded-full ${
-                                theme.variant === 'Original' ? 'bg-gray-100 text-gray-700' :
+                                theme.variant === 'Original' ? 'bg-[var(--base-300)] text-[var(--base-content)]' :
                                 theme.variant === 'Vibrant' ? 'bg-orange-100 text-orange-700' :
                                 'bg-green-100 text-green-700'
                               }`}>
                                 {theme.variant}
                               </span>
-                              <span className="text-xs text-gray-500">{theme.description}</span>
+                              <span className="text-xs text-[var(--neutral)]">{theme.description}</span>
                             </div>
                           </div>
                           
                           {/* Selected Indicator */}
                           {currentTheme === theme.id && (
-                            <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <div className="w-5 h-5 bg-[var(--primary)] rounded-full flex items-center justify-center flex-shrink-0">
+                              <svg className="w-3 h-3 text-[var(--primary-content)]" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                               </svg>
                             </div>
@@ -440,9 +328,9 @@ export function ThemePicker() {
             </div>
             
             {/* Footer */}
-            <div className="p-4 border-t border-gray-100 bg-gray-50">
-              <p className="text-xs text-gray-500 text-center">
-                Theme changes apply instantly and persist across sessions
+            <div className="p-4 border-t border-[var(--base-300)] bg-[var(--base-200)]">
+              <p className="text-xs text-[var(--neutral)] text-center">
+                Theme changes apply instantly and persist across sessions. Uses semantic color system (primary, secondary, accent, neutral).
               </p>
             </div>
           </div>

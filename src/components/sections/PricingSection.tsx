@@ -50,14 +50,14 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-20 bg-[var(--section-alt-bg)]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--professional-navy)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--neutral)] max-w-2xl mx-auto">
             Choose a plan that fits your business needs and budget. 
             No hidden fees, no surprises—just straightforward pricing.
           </p>
@@ -68,14 +68,14 @@ export function PricingSection() {
           {pricingTiers.map((tier, index) => (
             <div 
               key={index} 
-              className={`bg-white rounded-2xl p-8 shadow-sm border relative ${
-                tier.isPopular ? 'ring-2 ring-[var(--trust-blue)] scale-105' : ''
+              className={`bg-[var(--base-100)] rounded-2xl p-8 shadow-sm border border-[var(--base-300)] relative ${
+                tier.isPopular ? 'ring-2 ring-[var(--primary)] scale-105' : ''
               }`}
             >
               {/* Popular Badge */}
               {tier.isPopular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-[var(--trust-blue)] text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-[var(--primary)] text-[var(--primary-content)] px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
                   </span>
                 </div>
@@ -83,17 +83,17 @@ export function PricingSection() {
 
               {/* Header */}
               <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold text-[var(--professional-navy)] mb-2">
+                <h3 className="text-xl font-semibold text-[var(--secondary)] mb-2">
                   {tier.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">{tier.description}</p>
+                <p className="text-[var(--neutral)] text-sm mb-4">{tier.description}</p>
 
                 {/* Price */}
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-[var(--professional-navy)]">
+                  <span className="text-4xl font-bold text-[var(--secondary)]">
                     €{tier.price}
                   </span>
-                  <span className="text-gray-500">/{tier.period}</span>
+                  <span className="text-[var(--neutral)]">/{tier.period}</span>
                 </div>
               </div>
 
@@ -101,10 +101,10 @@ export function PricingSection() {
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-[var(--financial-green)] rounded-full flex-shrink-0 mt-0.5 flex items-center justify-center">
-                      <span className="text-white text-xs">✓</span>
+                    <div className="w-5 h-5 bg-[var(--accent)] rounded-full flex-shrink-0 mt-0.5 flex items-center justify-center">
+                      <span className="text-[var(--accent-content)] text-xs">✓</span>
                     </div>
-                    <span className="text-gray-600 text-sm">{feature}</span>
+                    <span className="text-[var(--neutral)] text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -113,8 +113,8 @@ export function PricingSection() {
               <button 
                 className={`w-full py-3 px-6 rounded-full font-medium transition-colors ${
                   tier.isPopular 
-                    ? 'bg-[var(--trust-blue)] text-white hover:bg-[var(--professional-navy)]' 
-                    : 'border-2 border-[var(--trust-blue)] text-[var(--trust-blue)] hover:bg-[var(--trust-blue)] hover:text-white'
+                    ? 'bg-[var(--primary)] text-[var(--primary-content)] hover:bg-[var(--primary-hover)]' 
+                    : 'border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--primary-content)]'
                 }`}
               >
                 {tier.ctaText}
@@ -125,7 +125,7 @@ export function PricingSection() {
 
         {/* Additional Information */}
         <div className="mt-16 text-center">
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-[var(--neutral)]">
             <span>✓ Free initial consultation</span>
             <span>✓ No setup fees</span>
             <span>✓ Cancel anytime</span>

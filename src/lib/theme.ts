@@ -3,20 +3,10 @@ export const PREDEFINED_THEMES = {
   'classic-vibrant': 'Classic Trust - Vibrant', 
   'classic-mellow': 'Classic Trust - Mellow',
   'wealth-original': 'Wealth & Prosperity - Original',
-  'wealth-vibrant': 'Wealth & Prosperity - Vibrant',
-  'wealth-mellow': 'Wealth & Prosperity - Mellow',
-  'premium-original': 'Premium Luxury - Original',
-  'premium-vibrant': 'Premium Luxury - Vibrant',
-  'premium-mellow': 'Premium Luxury - Mellow',
   'fintech-original': 'Modern Fintech - Original',
-  'fintech-vibrant': 'Modern Fintech - Vibrant',
-  'fintech-mellow': 'Modern Fintech - Mellow',
+  'luxury-original': 'Premium Luxury - Original',
   'earth-original': 'Earth & Stability - Original',
-  'earth-vibrant': 'Earth & Stability - Vibrant',
-  'earth-mellow': 'Earth & Stability - Mellow',
   'minimal-original': 'Minimal Clean - Original',
-  'minimal-vibrant': 'Minimal Clean - Vibrant',
-  'minimal-mellow': 'Minimal Clean - Mellow',
 } as const;
 
 export type ThemeId = keyof typeof PREDEFINED_THEMES;

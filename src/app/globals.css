@@ -1,270 +1,308 @@
 @import "tailwindcss";
 
-/* Default Theme - Classic Trust Original */
+/* ========================================
+   SEMANTIC COLOR SYSTEM (DaisyUI Style)
+   ======================================== */
+
+/* Default Theme - Classic Trust */
 :root {
+  /* Base Colors */
   --background: #ffffff;
   --foreground: #171717;
-  --trust-blue: #1e40af;
-  --financial-green: #059669;
-  --professional-navy: #0f172a;
-  --light-blue: #dbeafe;
-  --light-green: #d1fae5;
-  --neutral-gray: #64748b;
+  
+  /* Semantic Colors */
+  --primary: #1e40af;          /* Main brand color - buttons, links, focus */
+  --primary-content: #ffffff;  /* Text on primary */
+  
+  --secondary: #0f172a;        /* Secondary brand color - headings, dark sections */
+  --secondary-content: #ffffff; /* Text on secondary */
+  
+  --accent: #059669;           /* Accent color - success, highlights, stats */
+  --accent-content: #ffffff;   /* Text on accent */
+  
+  --neutral: #64748b;          /* Body text, muted elements */
+  --neutral-content: #ffffff;  /* Text on neutral */
+  
+  --base-100: #ffffff;         /* Card backgrounds, main surfaces */
+  --base-200: #f8fafc;         /* Subtle backgrounds */
+  --base-300: #e2e8f0;         /* Borders, dividers */
+  --base-content: #1e293b;     /* Text on base colors */
+  
+  /* State Colors */
+  --info: #0ea5e9;
+  --info-content: #ffffff;
+  --success: #10b981;
+  --success-content: #ffffff;
+  --warning: #f59e0b;
+  --warning-content: #ffffff;
+  --error: #ef4444;
+  --error-content: #ffffff;
+  
+  /* Component-Specific Semantics */
+  --hero-bg: var(--base-200);
+  --section-alt-bg: var(--base-200);
+  --card-bg: var(--base-100);
+  --dark-section-bg: var(--secondary);
+  --dark-section-content: var(--secondary-content);
+  
+  /* Interactive States */
+  --primary-hover: #1e3a8a;
+  --secondary-hover: #334155;
+  --accent-hover: #047857;
 }
 
 /* ========================================
-   CLASSIC TRUST THEMES
+   THEME VARIATIONS
    ======================================== */
 
-/* Classic Trust - Original (Balanced Professional) */
+/* Classic Trust - Original (Default) */
 [data-theme="classic-original"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #1e40af;
-  --financial-green: #059669;
-  --professional-navy: #0f172a;
-  --light-blue: #dbeafe;
-  --light-green: #d1fae5;
-  --neutral-gray: #64748b;
+  --primary: #1e40af;
+  --primary-content: #ffffff;
+  --primary-hover: #1e3a8a;
+  
+  --secondary: #0f172a;
+  --secondary-content: #ffffff;
+  --secondary-hover: #334155;
+  
+  --accent: #059669;
+  --accent-content: #ffffff;
+  --accent-hover: #047857;
+  
+  --neutral: #64748b;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #f8fafc;
+  --base-300: #e2e8f0;
+  --base-content: #1e293b;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: var(--base-200);
+  --dark-section-bg: var(--secondary);
 }
 
 /* Classic Trust - Vibrant (Electric Energy) */
 [data-theme="classic-vibrant"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #0066ff;
-  --financial-green: #00d084;
-  --professional-navy: #ff6b35;
-  --light-blue: #80ccff;
-  --light-green: #80e8b8;
-  --neutral-gray: #4a5568;
+  --primary: #0066ff;
+  --primary-content: #ffffff;
+  --primary-hover: #0052cc;
+  
+  --secondary: #ff6b35;
+  --secondary-content: #ffffff;
+  --secondary-hover: #e55a2b;
+  
+  --accent: #00d084;
+  --accent-content: #ffffff;
+  --accent-hover: #00b36b;
+  
+  --neutral: #4a5568;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #f7fafc;
+  --base-300: #edf2f7;
+  --base-content: #2d3748;
+  
+  --hero-bg: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 208, 132, 0.05));
+  --section-alt-bg: #f7fafc;
+  --dark-section-bg: var(--secondary);
 }
 
 /* Classic Trust - Mellow (Warm & Earthy) */
 [data-theme="classic-mellow"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #6b8db5;
-  --financial-green: #7a9b6e;
-  --professional-navy: #8b6f52;
-  --light-blue: #b5c8db;
-  --light-green: #c4d1b8;
-  --neutral-gray: #9b8b7a;
+  --primary: #6b8db5;
+  --primary-content: #ffffff;
+  --primary-hover: #5a7a9f;
+  
+  --secondary: #8b6f52;
+  --secondary-content: #ffffff;
+  --secondary-hover: #7a5d43;
+  
+  --accent: #7a9b6e;
+  --accent-content: #ffffff;
+  --accent-hover: #6b8960;
+  
+  --neutral: #9b8b7a;
+  --neutral-content: #ffffff;
+  
+  --base-100: #fefcf9;
+  --base-200: #faf8f5;
+  --base-300: #f0ede8;
+  --base-content: #4a453e;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #f6f4f1;
+  --dark-section-bg: var(--secondary);
 }
 
-/* ========================================
-   WEALTH & PROSPERITY THEMES
-   ======================================== */
-
-/* Wealth & Prosperity - Original (Growth-Focused) */
+/* Wealth & Prosperity - Original */
 [data-theme="wealth-original"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #0d9488;
-  --financial-green: #047857;
-  --professional-navy: #134e4a;
-  --light-blue: #ccfbf1;
-  --light-green: #dcfce7;
-  --neutral-gray: #6b7280;
+  --primary: #0d9488;
+  --primary-content: #ffffff;
+  --primary-hover: #0f766e;
+  
+  --secondary: #134e4a;
+  --secondary-content: #ffffff;
+  --secondary-hover: #285e5a;
+  
+  --accent: #047857;
+  --accent-content: #ffffff;
+  --accent-hover: #065f46;
+  
+  --neutral: #6b7280;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #f0fdfa;
+  --base-300: #ccfbf1;
+  --base-content: #134e4a;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #ecfdf5;
+  --dark-section-bg: var(--secondary);
 }
 
-/* Wealth & Prosperity - Vibrant (Bright Wealth) */
-[data-theme="wealth-vibrant"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #00bcd4;
-  --financial-green: #4caf50;
-  --professional-navy: #ff9800;
-  --light-blue: #80deea;
-  --light-green: #a5d6a7;
-  --neutral-gray: #546e7a;
-}
-
-/* Wealth & Prosperity - Mellow (Earthy Prosperity) */
-[data-theme="wealth-mellow"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #8fa88c;
-  --financial-green: #b8753a;
-  --professional-navy: #a08470;
-  --light-blue: #c4d1c8;
-  --light-green: #d4b896;
-  --neutral-gray: #9b8b7a;
-}
-
-/* ========================================
-   PREMIUM LUXURY THEMES
-   ======================================== */
-
-/* Premium Luxury - Original (Sophisticated Purple/Gold) */
-[data-theme="luxury-original"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #6366f1;
-  --financial-green: #d97706;
-  --professional-navy: #312e81;
-  --light-blue: #e0e7ff;
-  --light-green: #fef3c7;
-  --neutral-gray: #6b7280;
-}
-
-/* Premium Luxury - Vibrant (High-Energy Luxury) */
-[data-theme="luxury-vibrant"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #8b5cf6;
-  --financial-green: #fbbf24;
-  --professional-navy: #ec4899;
-  --light-blue: #c4b5fd;
-  --light-green: #fde68a;
-  --neutral-gray: #6b7280;
-}
-
-/* Premium Luxury - Mellow (Dusty Rose Elegance) */
-[data-theme="luxury-mellow"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #c2949a;
-  --financial-green: #c8835f;
-  --professional-navy: #7d6b8d;
-  --light-blue: #dcc4c9;
-  --light-green: #e4c1ab;
-  --neutral-gray: #a69088;
-}
-
-/* ========================================
-   MODERN FINTECH THEMES
-   ======================================== */
-
-/* Modern Fintech - Original (Contemporary Balance) */
+/* Modern Fintech - Original */
 [data-theme="fintech-original"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #0ea5e9;
-  --financial-green: #10b981;
-  --professional-navy: #1e293b;
-  --light-blue: #e0f2fe;
-  --light-green: #d1fae5;
-  --neutral-gray: #64748b;
+  --primary: #0ea5e9;
+  --primary-content: #ffffff;
+  --primary-hover: #0284c7;
+  
+  --secondary: #1e293b;
+  --secondary-content: #ffffff;
+  --secondary-hover: #334155;
+  
+  --accent: #10b981;
+  --accent-content: #ffffff;
+  --accent-hover: #059669;
+  
+  --neutral: #64748b;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #e0f2fe;
+  --base-300: #bae6fd;
+  --base-content: #0c4a6e;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #d1fae5;
+  --dark-section-bg: var(--secondary);
 }
 
-/* Modern Fintech - Vibrant (Tech-Forward Energy) */
-[data-theme="fintech-vibrant"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #0ea5e9;
-  --financial-green: #06d6a0;
-  --professional-navy: #ff6b6b;
-  --light-blue: #74c0fc;
-  --light-green: #51cf66;
-  --neutral-gray: #495057;
+/* Premium Luxury - Original */
+[data-theme="luxury-original"] {
+  --primary: #6366f1;
+  --primary-content: #ffffff;
+  --primary-hover: #5b56f5;
+  
+  --secondary: #312e81;
+  --secondary-content: #ffffff;
+  --secondary-hover: #4c46a8;
+  
+  --accent: #d97706;
+  --accent-content: #ffffff;
+  --accent-hover: #c2670a;
+  
+  --neutral: #6b7280;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #faf7ff;
+  --base-300: #e0e7ff;
+  --base-content: #312e81;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #fef3c7;
+  --dark-section-bg: var(--secondary);
 }
 
-/* Modern Fintech - Mellow (Warm Tech) */
-[data-theme="fintech-mellow"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #6b8db5;
-  --financial-green: #95a885;
-  --professional-navy: #b8753a;
-  --light-blue: #b5c8db;
-  --light-green: #c8d1bb;
-  --neutral-gray: #9b8b7a;
-}
-
-/* ========================================
-   EARTH & STABILITY THEMES
-   ======================================== */
-
-/* Earth & Stability - Original (Reliable Warmth) */
+/* Earth & Stability - Original */
 [data-theme="earth-original"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #0f766e;
-  --financial-green: #059669;
-  --professional-navy: #92400e;
-  --light-blue: #f0fdfa;
-  --light-green: #d1fae5;
-  --neutral-gray: #78716c;
+  --primary: #0f766e;
+  --primary-content: #ffffff;
+  --primary-hover: #134e4a;
+  
+  --secondary: #92400e;
+  --secondary-content: #ffffff;
+  --secondary-hover: #9a3412;
+  
+  --accent: #059669;
+  --accent-content: #ffffff;
+  --accent-hover: #047857;
+  
+  --neutral: #78716c;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #f0fdfa;
+  --base-300: #ccfbf1;
+  --base-content: #134e4a;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #d1fae5;
+  --dark-section-bg: var(--secondary);
 }
 
-/* Earth & Stability - Vibrant (Energetic Earth) */
-[data-theme="earth-vibrant"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #0891b2;
-  --financial-green: #16a34a;
-  --professional-navy: #ea580c;
-  --light-blue: #67e8f9;
-  --light-green: #86efac;
-  --neutral-gray: #78716c;
-}
-
-/* Earth & Stability - Mellow (Natural Sophistication) */
-[data-theme="earth-mellow"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #8fa88c;
-  --financial-green: #9ba068;
-  --professional-navy: #c8835f;
-  --light-blue: #c4d1c8;
-  --light-green: #d3d4a0;
-  --neutral-gray: #a08470;
-}
-
-/* ========================================
-   MINIMAL CLEAN THEMES
-   ======================================== */
-
-/* Minimal Clean - Original (Professional Minimalism) */
+/* Minimal Clean - Original */
 [data-theme="minimal-original"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #475569;
-  --financial-green: #6b7280;
-  --professional-navy: #1e293b;
-  --light-blue: #f1f5f9;
-  --light-green: #f8fafc;
-  --neutral-gray: #64748b;
-}
-
-/* Minimal Clean - Vibrant (Bold Minimal) */
-[data-theme="minimal-vibrant"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #1e40af;
-  --financial-green: #059669;
-  --professional-navy: #dc2626;
-  --light-blue: #dbeafe;
-  --light-green: #d1fae5;
-  --neutral-gray: #374151;
-}
-
-/* Minimal Clean - Mellow (Warm Minimal) */
-[data-theme="minimal-mellow"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --trust-blue: #9b8b7a;
-  --financial-green: #a69088;
-  --professional-navy: #8b6f52;
-  --light-blue: #e6ddd4;
-  --light-green: #e8ddd6;
-  --neutral-gray: #b5a897;
+  --primary: #475569;
+  --primary-content: #ffffff;
+  --primary-hover: #334155;
+  
+  --secondary: #1e293b;
+  --secondary-content: #ffffff;
+  --secondary-hover: #334155;
+  
+  --accent: #6b7280;
+  --accent-content: #ffffff;
+  --accent-hover: #4b5563;
+  
+  --neutral: #64748b;
+  --neutral-content: #ffffff;
+  
+  --base-100: #ffffff;
+  --base-200: #f1f5f9;
+  --base-300: #e2e8f0;
+  --base-content: #1e293b;
+  
+  --hero-bg: var(--base-200);
+  --section-alt-bg: #f8fafc;
+  --dark-section-bg: var(--secondary);
 }
 
 @theme inline {
+  /* Base System Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   
-  /* Brand Color Theme */
-  --color-trust-blue: var(--trust-blue);
-  --color-financial-green: var(--financial-green);
-  --color-professional-navy: var(--professional-navy);
-  --color-light-blue: var(--light-blue);
-  --color-light-green: var(--light-green);
-  --color-neutral-gray: var(--neutral-gray);
+  /* Semantic Colors for Tailwind */
+  --color-primary: var(--primary);
+  --color-primary-content: var(--primary-content);
+  --color-secondary: var(--secondary);
+  --color-secondary-content: var(--secondary-content);
+  --color-accent: var(--accent);
+  --color-accent-content: var(--accent-content);
+  --color-neutral: var(--neutral);
+  --color-neutral-content: var(--neutral-content);
+  
+  /* Base Colors */
+  --color-base-100: var(--base-100);
+  --color-base-200: var(--base-200);
+  --color-base-300: var(--base-300);
+  --color-base-content: var(--base-content);
+  
+  /* State Colors */
+  --color-info: var(--info);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  
+  /* Component Semantics */
+  --color-hero-bg: var(--hero-bg);
+  --color-section-alt-bg: var(--section-alt-bg);
+  --color-card-bg: var(--card-bg);
+  --color-dark-section-bg: var(--dark-section-bg);
 }
 
 @media (prefers-color-scheme: dark) {

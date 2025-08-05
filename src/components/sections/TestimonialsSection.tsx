@@ -15,20 +15,20 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[var(--section-alt-bg)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--professional-navy)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--neutral)] max-w-2xl mx-auto">
             See how we&apos;ve helped businesses like yours achieve financial success and peace of mind
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border">
+            <div key={index} className="bg-[var(--base-100)] p-8 rounded-2xl shadow-sm border border-[var(--base-300)]">
               {/* Stars */}
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -37,14 +37,14 @@ export function TestimonialsSection() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+              <blockquote className="text-[var(--base-content)] mb-6 leading-relaxed">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
               {/* Author */}
               <div>
-                <div className="font-semibold text-[var(--professional-navy)]">{testimonial.author}</div>
-                <div className="text-sm text-gray-600">{testimonial.position}</div>
+                <div className="font-semibold text-[var(--secondary)]">{testimonial.author}</div>
+                <div className="text-sm text-[var(--neutral)]">{testimonial.position}</div>
               </div>
             </div>
           ))}

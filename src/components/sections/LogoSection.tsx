@@ -10,15 +10,15 @@ export function LogoSection() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[var(--section-alt-bg)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-gray-600 font-medium">Trusted by businesses across industries</p>
+          <p className="text-[var(--neutral)] font-medium">Trusted by businesses across industries</p>
         </div>
         
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
           {logos.map((logo, index) => (
-            <div key={index} className="text-gray-400 font-bold text-lg">
+            <div key={index} className="text-[var(--neutral)]/60 font-bold text-lg">
               {logo}
             </div>
           ))}
